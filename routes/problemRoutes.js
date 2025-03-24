@@ -14,7 +14,7 @@ router.get("/test", (req, res) => {
     res.send("✅ Problem route is working!");
 });
 
-router.post("/:id/submit", async (req, res) => {
+router.post("/:id/submit", authMiddleware, async (req, res) => {
     console.log("🔥 /submit HIT!");
     const { code, language } = req.body;
     const problemId = req.params.id;
@@ -71,7 +71,7 @@ router.post("/:id/submit", async (req, res) => {
         if (language === "cpp" && fs.existsSync("submission.exe")) fs.unlinkSync("submission.exe");
 
         await Submission.create({
-            userId: "65e4f4fa1234567890abcdef", // 🔐 Replace with real user from JWT later
+            userId: req.user.id,
             problemId,
             code,
             language,
