@@ -1,0 +1,71 @@
+:body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs {
+  display: flex;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.tabs button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background-color: #ccc;
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.prompt-view {
+  padding: 20px;
+  flex: 1;
+}
+
+.workspace {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+}
+
+.palette {
+  width: 200px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ccc;
+}
+
+.block {
+  background-color: #d6eaff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: grab;
+}
+
+.code-area {
+  flex: 1;
+  padding: 10px;
+}
+
+.test-case-panel {
+  width: 250px;
+  padding: 10px;
+  background-color: #fff0d6;
+  border-left: 1px solid #ccc;
+}
+
+.test-case-collapsed {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff0d6;
+  border-left: 1px solid #ccc;
+}
